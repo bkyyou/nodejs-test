@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style/text.css">
+</head>
+<body>
+  <div class="wrapper">
+    <ul>
+      <% for(let i = 0; i < list.length; i++) { %>
+        <a href="<%= '/detail/' + list[i].id %>">
+          <li> <%= list[i].name %> </li>
+        </a>
+      <% } %>
+    </ul>
+
+    <% if(user) { %>
+      <h2>
+        <%= user.name %>
+      </h2>
+    <% } %>
+  </div>
+</body>
+</html>
